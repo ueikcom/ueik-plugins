@@ -1,11 +1,11 @@
-# 官方时钟插件
+# Official Clock Plugin
 
-这是一个极其简洁的状态栏时钟插件。
+This is an extremely minimal status bar clock plugin.
 
-## 功能介绍
-- 在状态栏右侧实时显示当前时间。
-- 支持在设置中动态切换是否显示“秒”。
-- 支持原生多语言（中英文无缝切换）。
+## Features
+- Displays the current time in real-time on the right side of the status bar.
+- Supports dynamically toggling seconds display in settings.
+- Native multi-language support (seamless switching between English and Chinese).
 
-## 开发参考
-这个插件是展示如何通过简单的原生 API 与引擎交互的绝佳示例。无需任何前端框架编译，即插即用！
+## Development Reference
+This plugin serves as an excellent example of how to interact with the engine using simple native APIs. No frontend framework compilation required, plug and play!

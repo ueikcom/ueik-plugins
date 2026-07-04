@@ -1,14 +1,14 @@
-# UEIK 官方插件库 (Monorepo)
+# UEIK Official Plugins
 
-这是 UEIK 官方维护的第三方社区插件大一统仓库。
-在这个仓库里，每一个文件夹代表一个独立的插件。
+This repository contains the official collection of plugins for the GaiOS/UEIK ecosystem.
 
-## 开发指南
+## Architecture
 
-1. 复制现有的插件文件夹（比如 `plugin-weather`）。
-2. 在新文件夹里编写你的 `main.js`。
-3. 当你开发完成，准备发布新版本时：
-   - 在 Github 上发布一个新的 Release（比如 `v1.0.0`）。
-   - 将各个插件的 `main.js` 重命名为 `[插件ID]-main.js` 上传到 Release 附件中。
+This is a delegated sub-registry. The main registry (`ueik-releases`) points to the `plugins.json` in this repository.
 
-这样，客户端就会自动通过 Github API 拉取到你最新的插件代码！
+### Adding a new plugin:
+1. Create a new directory for your plugin (e.g., `todo`).
+2. Add `main.js` and `README.md` inside that directory.
+3. Add a new entry to `plugins.json` in the root of this repository.
+
+The marketplace client will automatically parse the structure and render the plugins dynamically.

@@ -1,14 +1,14 @@
 [
   {
     "id": "weather",
-    "name": "天气预报",
+    "name": "Weather Report",
     "version": "1.0.0",
-    "description": "每天为你播报天气！这是一个内部组件。"
+    "description": "Daily weather broadcast! Official component."
   },
   {
     "id": "clock",
-    "name": "状态栏时钟",
+    "name": "Status Bar Clock",
     "version": "1.0.0",
-    "description": "提供极其简洁的原生状态栏时钟，支持显隐秒数以及多语言环境切换。"
+    "description": "Extremely minimal native status bar clock. Supports showing/hiding seconds and multi-language environments."
   }
 ]
