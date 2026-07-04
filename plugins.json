@@ -6,7 +6,7 @@
     "description": "Daily weather broadcast! Official component."
   },
   {
-    "id": "clock",
+    "id": "clock-widget",
     "name": "Status Bar Clock",
     "version": "1.0.0",
     "description": "Extremely minimal native status bar clock. Supports showing/hiding seconds and multi-language environments."

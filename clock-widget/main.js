@@ -1,4 +1,4 @@
-export default function ({ workspace, i18n, settings }) {
+export default function ({ workspace, i18n, settings, loadData, saveData }) {
     console.log("🚀 [Clock Widget Plugin] 第三方状态栏时钟插件启动！");
 
     // 1. 动态注册第三方多语言
@@ -15,7 +15,17 @@ export default function ({ workspace, i18n, settings }) {
 
     // 状态
     let showSeconds = true;
-    
+
+    // 异步加载数据
+    if (loadData) {
+        loadData().then(data => {
+            if (data && typeof data.showSeconds === 'boolean') {
+                showSeconds = data.showSeconds;
+                if (typeof tick === 'function') tick();
+            }
+        });
+    }
+
     // 2. 注册设置面板 (测试用)
     const unregTab = settings.registerTab({
         id: 'clock-widget',
@@ -30,6 +40,7 @@ export default function ({ workspace, i18n, settings }) {
                        (val) => {
                            showSeconds = val;
                            tick(); // 立即刷新
+                           if (saveData) saveData({ showSeconds });
                        }
                    );
 
